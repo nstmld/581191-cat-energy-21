@@ -1,0 +1,21 @@
+.button {
+  @include Oswald;
+  font-size: 14px;
+  line-height: 18px;
+  color: $basic-white;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $basic-green;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $special-green-dark;
+  }
+
+  &:active {
+    background-color: $special-green-dark;
+    color: transparentize($basic-white, 0.7);
+  }
+}

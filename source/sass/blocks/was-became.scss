@@ -1,0 +1,14 @@
+.was-became {
+  @include Oswald;
+  color: $basic-black;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.was-became__was {
+  text-align: left;
+}
+
+.was-became__became {
+  text-align: right;
+}

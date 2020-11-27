@@ -1,0 +1,32 @@
+.program__item {
+  @include list-style;
+  background-color: $background-gray;
+  padding: 20px;
+}
+
+.program__title {
+  @include Oswald;
+  font-size: 24px;
+  line-height: 37px;
+  padding: 0;
+  margin: 0;
+}
+
+.program__description {
+  @include Arial;
+  color: $special-gray-dark;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.program__link {
+  @include Oswald;
+  color: $basic-black;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+
+  &:active {
+    color: transparentize($basic-black, 0.7);
+  }
+}

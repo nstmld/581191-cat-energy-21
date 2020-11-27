@@ -1,0 +1,7 @@
+.how-it-works__list {
+  @include list-style;
+  @include Arial;
+  font-size: 14px;
+  line-height: 18px;
+  color: $special-gray-dark;
+}

@@ -1,0 +1,17 @@
+.cooperation {
+  padding: 28px 20px;
+}
+
+.cooperation__message {
+  @include Oswald;
+  color: $add-gray;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.cooperation__address {
+  @include Arial;
+  font-size: 14px;
+  line-height: 20px;
+  color: $special-gray-dark;
+}
