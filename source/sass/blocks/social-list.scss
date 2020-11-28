@@ -1,15 +1,15 @@
 .social-list {
   @include list-style;
-}
 
-.social-list__link svg {
-  fill: $special-gray-middle;
+  svg {
+    fill: $special-gray-middle;
 
-  &:hover {
-    fill: $basic-green;
-  }
+    &:hover {
+      fill: $basic-green;
+    }
 
-  &:active {
-    fill: transparentize($basic-green, 0.7);
+    &:active {
+      fill: transparentize($basic-green, 0.7);
+    }
   }
 }

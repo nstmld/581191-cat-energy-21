@@ -4,14 +4,13 @@
 }
 
 .statistic__number {
-  @include Oswald-bold;
   font-size: 24px;
   line-height: 24px;
   color: $basic-black;
 }
 
 .statistic__description {
-  @include Arial;
+  font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
 }

@@ -1,6 +1,5 @@
 .intro {
   background-image: url("../img/intro-background-mobile.jpg");
-  background-color: opacify($basic-green, 0.85);
   background-repeat: no-repeat;
   background-position: top center;
   color: $basic-white;
@@ -8,7 +7,7 @@
 }
 
 .intro__slogan {
-  @include Oswald;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 14px;
 }

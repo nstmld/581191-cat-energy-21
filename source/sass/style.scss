@@ -2,19 +2,24 @@
 @import "global/colors.scss";
 @import "global/fonts.scss";
 @import "global/global.scss";
+@import "global/mixins.scss";
+@import "global/visually-hidden.scss";
 
-//* All pages *//
-@import "blocks/button.scss";
+//* Page *//
+@import "blocks/page.scss";
+
+//* Header & Footer *//
 @import "blocks/main-footer.scss";
 @import "blocks/main-nav.scss";
-@import "blocks/map.scss";
-@import "blocks/page.scss";
-@import "blocks/page-header.scss";
-@import "blocks/page-main.scss";
 @import "blocks/social-list.scss";
+
+//* Title *//
 @import "blocks/title.scss";
 
-//* Index *//
+//* Button *//
+@import "blocks/button.scss";
+
+//* Blocks *//
 @import "blocks/cooperation.scss";
 @import "blocks/how-it-works.scss";
 @import "blocks/intro.scss";

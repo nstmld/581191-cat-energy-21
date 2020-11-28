@@ -7,16 +7,16 @@
 }
 
 .model__description {
-  @include Arial;
+  font-family: "Arial", sans-serif;
   color: $special-gray-dark;
   font-size: 14px;
   line-height: 18px;
 }
 
 .model__cost {
-  @include Oswald;
   color: $basic-black;
   font-size: 14px;
   text-align: center;
   line-height: 20px;
+  text-transform: uppercase;
 }
