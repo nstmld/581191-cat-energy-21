@@ -1,0 +1,22 @@
+.model {
+  background-color: $background-gray;
+}
+
+.model__wrapper {
+  padding: 30px 20px;
+}
+
+.model__description {
+  font-family: "Arial", sans-serif;
+  color: $special-gray-dark;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.model__cost {
+  color: $basic-black;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
+}

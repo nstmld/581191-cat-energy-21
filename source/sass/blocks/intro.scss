@@ -1,0 +1,13 @@
+.intro {
+  background-image: url("../img/intro-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: $basic-white;
+  text-align: center;
+}
+
+.intro__slogan {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+}

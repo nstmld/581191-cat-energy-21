@@ -1,0 +1,37 @@
+.main-footer {
+  background-color: $basic-gray;
+}
+
+.main-footer__logo svg {
+  fill: $basic-black;
+
+  &:hover {
+    fill: transparentize($basic-black, 0.2);
+  }
+
+  &:active {
+    fill: transparentize($basic-black, 0.4);
+  }
+}
+
+.main-footer__copyright {
+  font-family: "Arial", sans-serif;
+  color: $special-gray-dark;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+
+  svg,
+  span {
+    fill: $special-gray-middle;
+
+    &:hover {
+      fill: $basic-green;
+    }
+
+    &:active {
+      fill: transparentize($basic-green, 0.7);
+      color: transparentize($special-gray-dark, 0.7);
+    }
+  }
+}

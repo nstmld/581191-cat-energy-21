@@ -1,0 +1,15 @@
+.social-list {
+  @include list-style;
+
+  svg {
+    fill: $special-gray-middle;
+
+    &:hover {
+      fill: $basic-green;
+    }
+
+    &:active {
+      fill: transparentize($basic-green, 0.7);
+    }
+  }
+}
