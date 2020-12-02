@@ -1,0 +1,14 @@
+.input-comments {
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special-gray-dark;
+  border: 1px $special-gray-light solid;
+  padding: 13px 16px;
+
+  &::placeholder {
+    color: $special-gray-dark;
+  }
+}

@@ -15,6 +15,7 @@
 
 //* Title *//
 @import "blocks/title.scss";
+@import "blocks/subtitle.scss";
 
 //* Button *//
 @import "blocks/button.scss";
@@ -25,5 +26,11 @@
 @import "blocks/intro.scss";
 @import "blocks/model.scss";
 @import "blocks/program.scss";
+@import "blocks/selection.scss";
 @import "blocks/statistic.scss";
 @import "blocks/was-became.scss";
+
+//* Forms *//
+@import "blocks/input-text.scss";
+@import "blocks/input-comments.scss";
+@import "blocks/input-radio.scss";

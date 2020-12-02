@@ -1,0 +1,12 @@
+.input-radio,
+.input-radio--checkbox {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special-gray-dark;
+}
+
+.input-radio--checkbox {
+  color: $basic-black;
+}

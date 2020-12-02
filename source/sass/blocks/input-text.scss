@@ -1,0 +1,21 @@
+.input-text {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special-gray-dark;
+
+  input {
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    border: 1px $special-gray-light solid;
+    color: $special-gray-dark;
+    padding: 13px 16px;
+
+    &::placeholder {
+      color: $special-gray-dark;
+    }
+  }
+}
