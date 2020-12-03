@@ -1,0 +1,16 @@
+.gift {
+  background-image: url("../img/gift-photo-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $basic-green;
+  color: $basic-white;
+  padding: 40px 60px;
+}
+
+.gift__title {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+}
