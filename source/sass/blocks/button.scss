@@ -18,4 +18,17 @@
     background-color: $special-green-dark;
     color: transparentize($basic-white, 0.7);
   }
+
+  &--more {
+    background-color: $basic-gray;
+    color: $special-gray-dark;
+
+    &:hover {
+      background-color: $add-gray-dark;
+    }
+
+    &:active {
+      color: transparentize($special-gray-dark, 0.7);
+    }
+  }
 }
