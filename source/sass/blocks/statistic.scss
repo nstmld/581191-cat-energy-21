@@ -10,7 +10,7 @@
 }
 
 .statistic__description {
-  font-family: "Arial", sans-serif;
+  @include arial;
   font-size: 12px;
   line-height: 12px;
 }

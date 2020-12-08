@@ -2,10 +2,20 @@
   @include list-style;
   font-weight: 600;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+  }
 }
 
 .main-nav__list-item {
   border-top: $add-gray-light 1px solid;
+
+  @media (min-width: $tablet) {
+    border-top: 0;
+  }
 
   a {
     text-decoration: none;

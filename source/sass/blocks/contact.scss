@@ -1,0 +1,33 @@
+.contact {
+  @media (min-width: $desktop) {
+    position: relative;
+  }
+}
+
+.contact__cooperation {
+  padding: 28px 20px;
+  background-color: $basic-white;
+  display: flex;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.contact__cooperation-message {
+  text-transform: uppercase;
+  color: $add-gray;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.contact__address {
+  @include arial;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: $special-gray-dark;
+}
