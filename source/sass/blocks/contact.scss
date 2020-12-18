@@ -1,6 +1,11 @@
 .contact {
+  position: relative;
+}
+
+.contact__wrapper {
   @media (min-width: $desktop) {
-    position: relative;
+    position: absolute;
+    height: 400px;
   }
 }
 
@@ -12,8 +17,8 @@
   @media (min-width: $desktop) {
     position: absolute;
     z-index: 1;
-    top: 20px;
-    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -25,7 +30,7 @@
 }
 
 .contact__address {
-  @include arial;
+  font-family: $arial;
   font-style: normal;
   font-size: 14px;
   line-height: 20px;

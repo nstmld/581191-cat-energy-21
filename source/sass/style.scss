@@ -5,6 +5,7 @@
 @import "global/mixins.scss";
 @import "global/viewports.scss";
 @import "global/visually-hidden.scss";
+@import "global/wrapper.scss";
 
 //* Page *//
 @import "blocks/page.scss";
@@ -29,10 +30,9 @@
 @import "blocks/how-it-works.scss";
 @import "blocks/intro.scss";
 @import "blocks/model.scss";
+@import "blocks/page-header.scss";
 @import "blocks/program.scss";
 @import "blocks/selection.scss";
-@import "blocks/statistic.scss";
-@import "blocks/was-became.scss";
 
 //* Forms *//
 @import "blocks/input-text.scss";

@@ -2,7 +2,6 @@
   @include list-style;
   display: flex;
   flex-direction: column;
-  margin: 10px;
 
   @media (min-width: $desktop) {
     flex-direction: row;
@@ -12,7 +11,13 @@
 .program__item {
   background-color: $background-gray;
   padding: 20px;
-  margin: 10px;
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop) {
+    &:nth-child(odd) {
+      margin-right: 80px;
+    }
+  }
 }
 
 .program__title {
@@ -25,7 +30,7 @@
 }
 
 .program__description {
-  @include arial;
+  font-family: $arial;
   color: $special-gray-dark;
   font-size: 14px;
   line-height: 18px;

@@ -1,10 +1,9 @@
 .how-it-works__list {
   @include list-style;
-  @include arial;
+  font-family: $arial;
   font-size: 14px;
   line-height: 18px;
   color: $special-gray-dark;
-  margin: 20px;
   display: flex;
   flex-direction: column;
 
@@ -15,9 +14,11 @@
 }
 
 .how-it-works__item {
+  padding: 15px 0;
+
   @media (min-width: $tablet) {
     flex-basis: 230px;
-    margin-right: 140px;
+    margin-right: 120px;
   }
 
   @media (min-width: $desktop) {

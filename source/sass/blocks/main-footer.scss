@@ -12,8 +12,8 @@
 }
 
 .main-footer__social-list {
-  border-top: 1px $add-gray-line solid;
-  border-bottom: 1px $add-gray-line solid;
+  border-top: 1px solid $add-gray-line;
+  border-bottom: 1px solid $add-gray-line;
 
   @media (min-width: $tablet) {
     border-top: 0;
@@ -34,7 +34,7 @@
 }
 
 .main-footer__copyright {
-  @include arial;
+  font-family: $arial;
   color: $special-gray-dark;
   text-decoration: none;
   font-size: 16px;

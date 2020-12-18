@@ -1,0 +1,14 @@
+.page-header__wrapper {
+  padding-top: 10px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-top: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 55px;
+  }
+}
