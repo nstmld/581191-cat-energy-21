@@ -1,7 +1,27 @@
 .how-it-works__list {
   @include list-style;
-  font-family: "Arial", sans-serif;
+  font-family: $arial;
   font-size: 14px;
   line-height: 18px;
   color: $special-gray-dark;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.how-it-works__item {
+  padding: 15px 0;
+
+  @media (min-width: $tablet) {
+    flex-basis: 230px;
+    margin-right: 120px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 40px;
+  }
 }

@@ -9,3 +9,9 @@
   margin: 0;
   padding: 0;
 }
+
+
+@mixin arial {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+}

@@ -3,7 +3,9 @@
 @import "global/fonts.scss";
 @import "global/global.scss";
 @import "global/mixins.scss";
+@import "global/viewports.scss";
 @import "global/visually-hidden.scss";
+@import "global/wrapper.scss";
 
 //* Page *//
 @import "blocks/page.scss";
@@ -23,15 +25,14 @@
 //* Blocks *//
 @import "blocks/catalog.scss";
 @import "blocks/catalog-item.scss";
-@import "blocks/cooperation.scss";
+@import "blocks/contact.scss";
 @import "blocks/gift.scss";
 @import "blocks/how-it-works.scss";
 @import "blocks/intro.scss";
 @import "blocks/model.scss";
+@import "blocks/page-header.scss";
 @import "blocks/program.scss";
 @import "blocks/selection.scss";
-@import "blocks/statistic.scss";
-@import "blocks/was-became.scss";
 
 //* Forms *//
 @import "blocks/input-text.scss";

@@ -2,6 +2,25 @@
   background-color: $basic-gray;
 }
 
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+  }
+}
+
+.main-footer__social-list {
+  border-top: 1px solid $add-gray-line;
+  border-bottom: 1px solid $add-gray-line;
+
+  @media (min-width: $tablet) {
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
 .main-footer__logo svg {
   fill: $basic-black;
 
@@ -15,7 +34,7 @@
 }
 
 .main-footer__copyright {
-  font-family: "Arial", sans-serif;
+  font-family: $arial;
   color: $special-gray-dark;
   text-decoration: none;
   font-size: 16px;
