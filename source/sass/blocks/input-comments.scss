@@ -7,8 +7,19 @@
   color: $special-gray-dark;
   border: 1px $special-gray-light solid;
   padding: 13px 16px;
+  flex-grow: 1;
+  height: 150px;
 
   &::placeholder {
     color: $special-gray-dark;
   }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.input-comments__wrapper {
+  display: flex;
 }

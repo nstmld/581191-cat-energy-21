@@ -4,6 +4,18 @@
   font-size: 16px;
   line-height: 18px;
   color: $special-gray-dark;
+  display: flex;
+  align-items: center;
+  padding-bottom: 14px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  span {
+    padding-right: 15px;
+  }
 
   input {
     text-transform: uppercase;
@@ -12,10 +24,16 @@
     line-height: 18px;
     border: 1px $special-gray-light solid;
     color: $special-gray-dark;
-    padding: 13px 16px;
+    padding: 10px 16px;
+    flex-grow: 1;
 
     &::placeholder {
       color: $special-gray-dark;
+    }
+
+    @media (min-width: $tablet) {
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 }

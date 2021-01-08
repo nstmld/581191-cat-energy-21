@@ -1,7 +1,35 @@
 .subtitle {
+  position: relative;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &::before {
+    @include pseudo;
+    background-color: $basic-green;
+    height: 2px;
+    width: 100%;
+    margin: 0 auto;
+    top: 60%;
+    z-index: -2;
+  }
+
+  span {
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      background-color: $basic-white;
+      height: 110%;
+      width: calc(100% + 50px);
+      top: 0;
+      left: -25px;
+      z-index: -1;
+    }
+  }
 }

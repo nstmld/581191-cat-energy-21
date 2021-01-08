@@ -1,3 +1,12 @@
+.input-radio__block {
+  border-top: 1px solid $add-gray-line;
+  border-bottom: 1px solid $add-gray-line;
+
+  @media (min-width: $tablet) {
+    border: none;
+  }
+}
+
 .input-radio,
 .input-radio--checkbox {
   text-transform: uppercase;
@@ -5,8 +14,42 @@
   font-size: 16px;
   line-height: 18px;
   color: $special-gray-dark;
+  padding: 7px 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .input-radio--checkbox {
   color: $basic-black;
+
+  @media (min-width: $tablet) {
+    flex-basis: 50%;
+  }
+
+  @media (min-width: $desktop) {
+    flex-basis: 25%;
+  }
+}
+
+.input-radio__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    border: 1px solid $add-gray-line;
+    padding: 25px;
+  }
+}
+
+.input-radio__list--checkbox {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
