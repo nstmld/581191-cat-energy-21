@@ -9,7 +9,14 @@
   }
 
   @media (min-width: $desktop) {
-    max-width: 1440px;
+    max-width: $desktop;
     padding: 0 110px;
+  }
+
+  &--thin-tablet {
+    @media (min-width: $tablet) and (max-width: $tablet-only) {
+      max-width: $tablet;
+      padding: 0 67px;
+    }
   }
 }

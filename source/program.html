@@ -25,9 +25,10 @@
         </nav>
       </div>
     </header>
-    <main class="selection page-main">
+
+    <main class="selection">
       <section class="selection__header">
-        <div class="selection__header-wrapper selection__wrapper wrapper">
+        <div class="wrapper wrapper--thin-tablet">
           <h1 class="title selection__title">Подбор программы</h1>
           <p class="selection__description">
             Заполните анкету, и мы подберем<br>программу питания для вашего кота
@@ -35,50 +36,52 @@
         </div>
       </section>
 
-        <form class="selection__form" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="selection__fieldset selection__cat-info">
-            <div class="selection__wrapper wrapper">
-              <legend class="visually-hidden">Данные кота</legend>
-              <label class="input-text">
-                <span>Имя:<sup>*</sup></span>
-                <input type="text" name="cat-name" placeholder="Барсик" required>
-              </label>
-              <label class="input-text">
-                <span>Вес (кг):<sup>*</sup></span>
-                <input type="text" name="weight" placeholder="7" required>
-              </label>
-              <label class="input-text">
-                <span>Возраст (лет):</span>
-                <input type="text" name="age" placeholder="7">
-              </label>
-            </div>
-          </fieldset>
-          <fieldset class="selection__fieldset selection__point input-radio__block">
-            <div class="input-radio__wrapper selection__wrapper wrapper">
-              <div class="input-radio__list">
-                <legend class="visually-hidden">Цель</legend>
-                <label class="input-radio">
-                  <input type="radio" name="goal" value="weight-loss" checked>
-                  <span>Похудение</span>
+        <form class="form" method="get" action="https://echo.htmlacademy.ru">
+          <div class="form__two-column">
+            <fieldset class="form__cat-info">
+              <div class="wrapper wrapper--thin-tablet">
+                <legend class="visually-hidden">Данные кота</legend>
+                <label class="input-text">
+                  <span>Имя:<sup>*</sup></span>
+                  <input type="text" name="cat-name" placeholder="Барсик" required>
                 </label>
-                <label class="input-radio">
-                  <input type="radio" name="goal" value="muscle">
-                  <span>Набор массы</span>
+                <label class="input-text">
+                  <span>Вес (кг):<sup>*</sup></span>
+                  <input type="text" name="weight" placeholder="7" required>
                 </label>
-                <label class="input-radio">
-                  <input type="radio" name="goal" value="not-know">
-                  <span>Не знаю (Нужен ваш совет)</span>
+                <label class="input-text">
+                  <span>Возраст (лет):</span>
+                  <input type="text" name="age" placeholder="7">
                 </label>
               </div>
-            </div>
-          </fieldset>
-          <fieldset class="selection__fieldset">
-            <div class="subtitle selection__subtitle">
-              <legend class="selection__wrapper wrapper">
+            </fieldset>
+            <fieldset class="form__point">
+              <div class="wrapper wrapper--thin-tablet">
+                <div class="input-choice form__point-list">
+                  <legend class="visually-hidden">Цель</legend>
+                  <label class="input-choice__item">
+                    <input type="radio" name="goal" value="weight-loss" checked>
+                    <span>Похудение</span>
+                  </label>
+                  <label class="input-choice__item">
+                    <input type="radio" name="goal" value="muscle">
+                    <span>Набор массы</span>
+                  </label>
+                  <label class="input-choice__item">
+                    <input type="radio" name="goal" value="not-know">
+                    <span>Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="owner-contact">
+            <div class="subtitle form__subtitle">
+              <legend class="wrapper wrapper--thin-tablet">
                 <span>Контактные данные (владельца кота)</span>
               </legend>
             </div>
-            <div class="selection__contacts selection__wrapper wrapper">
+            <div class="form__contacts wrapper wrapper--thin-tablet">
               <label class="input-text input-text--email">
                 <span>E-mail:<sup>*</sup></span>
                 <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -89,46 +92,48 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="selection__fieldset">
-            <div class="subtitle selection__subtitle">
-              <legend class="selection__wrapper wrapper">
+          <fieldset class="comment">
+            <div class="subtitle form__subtitle">
+              <legend class="wrapper wrapper--thin-tablet">
                 <span>Комментарий</span>
               </legend>
             </div>
-            <div class="input-comments__wrapper selection__wrapper wrapper">
-              <textarea class="input-comments" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="wrapper wrapper--thin-tablet">
+              <textarea class="comment__input" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
-          <fieldset class="selection__fieldset">
-            <div class="subtitle selection__subtitle">
-              <legend class="selection__wrapper wrapper">
+          <fieldset class="additional">
+            <div class="subtitle form__subtitle">
+              <legend class="wrapper wrapper--thin-tablet">
                 <span>Дополнительно</span>
               </legend>
             </div>
-            <div class="input-radio__wrapper input-radio__wrapper--checkbox selection__wrapper wrapper">
-              <div class="input-radio__list--checkbox">
-                <label class="input-radio--checkbox">
+            <div class="wrapper wrapper--thin-tablet">
+              <div class="input-choice additional__list">
+                <label class="input-choice__item input-choice__item--checkbox">
                   <input type="checkbox" name="sweetener" checked>
                   <span>сахарозаменитель</span>
                 </label>
-                <label class="input-radio--checkbox">
+                <label class="input-choice__item input-choice__item--checkbox">
                   <input type="checkbox" name="water">
                   <span>питьевая вода</span>
                 </label>
-                <label class="input-radio--checkbox">
+                <label class="input-choice__item input-choice__item--checkbox">
                   <input type="checkbox" name="milk">
                   <span>молоко</span>
                 </label>
-                <label class="input-radio--checkbox">
+                <label class="input-choice__item input-choice__item--checkbox">
                   <input type="checkbox" name="vitamin">
                   <span>витамины</span>
                 </label>
               </div>
             </div>
           </fieldset>
-          <div class="selection__button-wrapper selection__wrapper wrapper">
-            <button class="button selection__button" type="submit">отправить заявку</button>
-            <small class="selection__note"><sup>*</sup> — Обязательные поля</small>
+          <div class="wrapper wrapper--thin-tablet">
+            <div class="form__button-wrapper">
+              <button class="button form__button" type="submit">отправить заявку</button>
+              <small class="form__note"><sup>*</sup> — Обязательные поля</small>
+            </div>
           </div>
         </form>
 

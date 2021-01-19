@@ -1,0 +1,14 @@
+.additional {
+  @include fieldset;
+}
+
+
+.additional__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

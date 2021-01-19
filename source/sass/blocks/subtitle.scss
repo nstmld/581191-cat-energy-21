@@ -33,3 +33,15 @@
     }
   }
 }
+
+.subtitle .wrapper {
+  width: $mobile;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+  }
+}

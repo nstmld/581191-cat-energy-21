@@ -1,4 +1,12 @@
-.input-comments {
+.comment {
+  @include fieldset;
+}
+
+.comment__subtitle {
+  margin-bottom: 28px;
+}
+
+.comment__input {
   text-transform: uppercase;
   font-family: inherit;
   font-weight: 400;
@@ -9,6 +17,7 @@
   padding: 13px 16px;
   flex-grow: 1;
   height: 150px;
+  width: 280px;
 
   &::placeholder {
     color: $special-gray-dark;
@@ -17,9 +26,10 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
+    width: 631px;
   }
-}
 
-.input-comments__wrapper {
-  display: flex;
+  @media (min-width: $desktop) {
+    width: 1120px;
+  }
 }
