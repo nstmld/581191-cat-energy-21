@@ -1,3 +1,51 @@
+// .subtitle {
+//   position: relative;
+//   font-size: 24px;
+//   line-height: 26px;
+//   font-weight: 400;
+//
+//   @media (min-width: $tablet) {
+//     font-size: 36px;
+//     line-height: 36px;
+//   }
+//
+//   &::before {
+//     @include pseudo;
+//     background-color: $basic-green;
+//     height: 2px;
+//     width: 100%;
+//     margin: 0 auto;
+//     top: 60%;
+//     z-index: -2;
+//   }
+//
+//   span {
+//     position: relative;
+//
+//     &::before {
+//       @include pseudo;
+//       background-color: $basic-white;
+//       height: 110%;
+//       width: calc(100% + 50px);
+//       top: 0;
+//       left: -25px;
+//       z-index: -1;
+//     }
+//   }
+// }
+//
+// .subtitle .wrapper {
+//   width: $mobile;
+//
+//   @media (min-width: $tablet) {
+//     width: $tablet;
+//   }
+//
+//   @media (min-width: $desktop) {
+//     width: $desktop;
+//   }
+// }
+
 .subtitle {
   position: relative;
   font-size: 24px;
@@ -11,37 +59,58 @@
 
   &::before {
     @include pseudo;
-    background-color: $basic-green;
     height: 2px;
+    background-color: $basic-green;
     width: 100%;
-    margin: 0 auto;
-    top: 60%;
-    z-index: -2;
-  }
-
-  span {
-    position: relative;
-
-    &::before {
-      @include pseudo;
-      background-color: $basic-white;
-      height: 110%;
-      width: calc(100% + 50px);
-      top: 0;
-      left: -25px;
-      z-index: -1;
-    }
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
   }
 }
 
-.subtitle .wrapper {
-  width: $mobile;
+.subtitle__text {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  background-color: $basic-white;
+  padding-right: 24px;
+  width: 187px;
+
+  &--catalog {
+    min-width: 226px;
+
+    @media (min-width: $tablet) {
+      width: 338px;
+    }
+  }
+
+  &::before {
+    @include pseudo;
+    width: 24px;
+    height: 100%;
+    background-color: $basic-white;
+    left: -24px;
+    top: 0;
+  }
 
   @media (min-width: $tablet) {
-    width: $tablet;
+    width: auto;
+    padding-right: 38px;
+    padding-left: 38px;
+
+    &::before {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop) {
-    width: $desktop;
+    padding-left: 0;
+
+    &::before {
+      display: block;
+      width: 38px;
+      left: -38px;
+    }
   }
 }

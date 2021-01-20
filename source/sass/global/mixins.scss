@@ -24,8 +24,4 @@
   &:last-of-type {
     border-bottom: none;
   }
-
-  @media (min-width: $desktop) {
-    flex-basis: 100%;
-  }
 }
