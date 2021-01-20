@@ -1,24 +1,24 @@
 .contact {
   position: relative;
-}
+  background-color: $basic-gray;
 
-.contact__wrapper {
   @media (min-width: $desktop) {
-    position: absolute;
-    height: 400px;
+    background-color: $basic-white;
   }
 }
 
 .contact__cooperation {
-  padding: 28px 20px;
-  background-color: $basic-white;
+  padding: 28px 0;
   display: flex;
+  align-items: center;
+  background-color: $basic-gray;
 
   @media (min-width: $desktop) {
     position: absolute;
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
+    background-color: $basic-white;
   }
 }
 
@@ -27,6 +27,9 @@
   color: $add-gray;
   font-size: 16px;
   line-height: 18px;
+  font-weight: 400;
+  flex-basis: 140px;
+  justify-content: space-between;
 }
 
 .contact__address {
@@ -35,4 +38,5 @@
   font-size: 14px;
   line-height: 20px;
   color: $special-gray-dark;
+  flex-basis: 140px;
 }

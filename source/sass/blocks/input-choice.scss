@@ -1,0 +1,25 @@
+.input-choice__item {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special-gray-dark;
+  padding: 7px 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.input-choice__item--checkbox {
+  color: $basic-black;
+
+  @media (min-width: $tablet) {
+    flex-basis: 50%;
+  }
+
+  @media (min-width: $desktop) {
+    flex-basis: 25%;
+  }
+}

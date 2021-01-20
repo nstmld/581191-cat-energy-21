@@ -15,3 +15,13 @@
   font-family: "Arial", sans-serif;
   font-weight: 400;
 }
+
+@mixin fieldset {
+  border: none;
+  margin: 0;
+  padding: 20px 0;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}

@@ -8,105 +8,148 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/logo-mobile.svg" width="34" height="38" alt="иконка Cat Energy">
-        <img src="img/logo-footer.svg" width="101" height="18" alt="Cat Energy">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__burger">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item main-nav__list-item--active"><a>главная</a></li>
-          <li class="main-nav__list-item"><a href="catalog.html">каталог продукции</a></li>
-          <li class="main-nav__list-item"><a href="program.html">подбор программы</a></li>
-        </ul>
-      </nav>
+      <div class="wrapper page-header__wrapper">
+        <a class="page-header__logo">
+          <img src="img/logo-mobile.svg" width="34" height="38" alt="иконка Cat Energy">
+          <img src="img/logo-footer.svg" width="101" height="18" alt="Cat Energy">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__burger">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__list-item"><a href="index.html">главная</a></li>
+            <li class="main-nav__list-item"><a href="catalog.html">каталог продукции</a></li>
+            <li class="main-nav__list-item main-nav__list-item--active"><a>подбор программы</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main class="selection page-main">
-      <h1 class="title selection__title">Подбор программы</h1>
-      <p class="selection__description">
-        Заполните анкету, и мы подберем программу питания для вашего кота
-      </p>
-      <form class="selection__form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="selection__fieldset">
-          <legend class="visually-hidden">Данные кота</legend>
-          <label class="input-text selection__input-text">
-            <span>Имя:<sup>*</sup></span>
-            <input type="text" name="cat-name" placeholder="Барсик" required>
-          </label>
-          <label class="input-text selection__input-text">
-            <span>Вес (кг):<sup>*</sup></span>
-            <input type="text" name="weight" placeholder="7" required>
-          </label>
-          <label class="input-text selection__input-text">
-            <span>Возраст (лет):</span>
-            <input type="text" name="age" placeholder="7">
-          </label>
-        </fieldset>
-        <fieldset class="selection__fieldset">
-          <legend class="visually-hidden">Цель</legend>
-          <label class="input-radio selection__input-radio">
-            <input type="radio" name="goal" value="weight-loss" checked>
-            <span>Похудение</span>
-          </label>
-          <label class="input-radio selection__input-radio">
-            <input type="radio" name="goal" value="muscle">
-            <span>Набор массы</span>
-          </label>
-          <label class="input-radio selection__input-radio">
-            <input type="radio" name="goal" value="not-know">
-            <span>Не знаю (Нужен ваш совет)</span>
-          </label>
-        </fieldset>
-        <fieldset class="selection__fieldset">
-          <legend class="subtitle selection__subtitle">Контактные данные (владельца кота)</legend>
-          <label class="input-text input-text--email selection__input-text">
-            <span>E-mail:<sup>*</sup></span>
-            <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
-          </label>
-          <label class="input-text input-text--phone selection__input-text">
-            <span>Телефон:<sup>*</sup></span>
-            <input type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
-          </label>
-        </fieldset>
-        <fieldset class="selection__fieldset">
-          <legend class="subtitle selection__subtitle">Комментарий</legend>
-          <input class="input-comments selection__input-comments" type="text" name="comments" placeholder="Расскажите обо всех повадках кота">
-        </fieldset>
-        <fieldset class="selection__fieldset">
-          <legend class="subtitle selection__subtitle">Дополнительно</legend>
-          <label class="input-radio--checkbox selection__input-checkbox">
-            <input type="checkbox" name="sweetener" checked>
-            <span>сахарозаменитель</span>
-          </label>
-          <label class="input-radio--checkbox selection__input-checkbox">
-            <input type="checkbox" name="water">
-            <span>питьевая вода</span>
-          </label>
-          <label class="input-radio--checkbox selection__input-checkbox">
-            <input type="checkbox" name="milk">
-            <span>молоко</span>
-          </label>
-          <label class="input-radio--checkbox selection__input-checkbox">
-            <input type="checkbox" name="vitamin">
-            <span>витамины</span>
-          </label>
-        </fieldset>
-        <button class="button selection__button" type="submit">отправить заявку</button>
-        <small class="selection__note"><sup>*</sup> — Обязательные поля</small>
-      </form>
-      <section class="cooperation">
-        <h2 class="cooperation__message">приглашаем к сотрудничеству дилеров!</h2>
-        <address class="cooperation__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</address>
+
+    <main class="selection">
+      <section class="selection__header">
+        <div class="wrapper wrapper--thin-tablet">
+          <h1 class="title selection__title">Подбор программы</h1>
+          <p class="selection__description">
+            Заполните анкету, и мы подберем<br>программу питания для вашего кота
+          </p>
+        </div>
       </section>
-      <section class="map">
-        <h2 class="visually-hidden">Как добраться</h2>
-        <img src="" width="320" height="362" alt="">
+
+        <form class="form" method="get" action="https://echo.htmlacademy.ru">
+          <div class="form__two-column">
+            <fieldset class="form__cat-info">
+              <div class="wrapper wrapper--thin-tablet">
+                <legend class="visually-hidden">Данные кота</legend>
+                <label class="input-text">
+                  <span>Имя:<sup>*</sup></span>
+                  <input type="text" name="cat-name" placeholder="Барсик" required>
+                </label>
+                <label class="input-text">
+                  <span>Вес (кг):<sup>*</sup></span>
+                  <input type="text" name="weight" placeholder="7" required>
+                </label>
+                <label class="input-text">
+                  <span>Возраст (лет):</span>
+                  <input type="text" name="age" placeholder="7">
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="form__point">
+              <div class="wrapper wrapper--thin-tablet">
+                <div class="input-choice form__point-list">
+                  <legend class="visually-hidden">Цель</legend>
+                  <label class="input-choice__item">
+                    <input type="radio" name="goal" value="weight-loss" checked>
+                    <span>Похудение</span>
+                  </label>
+                  <label class="input-choice__item">
+                    <input type="radio" name="goal" value="muscle">
+                    <span>Набор массы</span>
+                  </label>
+                  <label class="input-choice__item">
+                    <input type="radio" name="goal" value="not-know">
+                    <span>Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="owner-contact">
+            <div class="subtitle form__subtitle">
+              <legend class="wrapper wrapper--thin-tablet">
+                <span class="subtitle__text">Контактные данные (владельца кота)</span>
+              </legend>
+            </div>
+            <div class="form__contacts wrapper wrapper--thin-tablet">
+              <label class="input-text input-text--email">
+                <span>E-mail:<sup>*</sup></span>
+                <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </label>
+              <label class="input-text input-text--phone">
+                <span>Телефон:<sup>*</sup></span>
+                <input type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="comment">
+            <div class="subtitle form__subtitle">
+              <legend class="wrapper wrapper--thin-tablet">
+                <span class="subtitle__text">Комментарий</span>
+              </legend>
+            </div>
+            <div class="wrapper wrapper--thin-tablet">
+              <textarea class="comment__input" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </fieldset>
+          <fieldset class="additional">
+            <div class="subtitle form__subtitle">
+              <legend class="wrapper wrapper--thin-tablet">
+                <span class="subtitle__text">Дополнительно</span>
+              </legend>
+            </div>
+            <div class="wrapper wrapper--thin-tablet">
+              <div class="input-choice additional__list">
+                <label class="input-choice__item input-choice__item--checkbox">
+                  <input type="checkbox" name="sweetener" checked>
+                  <span>сахарозаменитель</span>
+                </label>
+                <label class="input-choice__item input-choice__item--checkbox">
+                  <input type="checkbox" name="water">
+                  <span>питьевая вода</span>
+                </label>
+                <label class="input-choice__item input-choice__item--checkbox">
+                  <input type="checkbox" name="milk">
+                  <span>молоко</span>
+                </label>
+                <label class="input-choice__item input-choice__item--checkbox">
+                  <input type="checkbox" name="vitamin">
+                  <span>витамины</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="wrapper wrapper--thin-tablet">
+            <div class="form__button-wrapper">
+              <button class="button form__button" type="submit">отправить заявку</button>
+              <small class="form__note"><sup>*</sup> — Обязательные поля</small>
+            </div>
+          </div>
+        </form>
+
+      <section class="contact">
+        <div class="wrapper contact__wrapper">
+          <div class="contact__cooperation">
+            <h2 class="contact__cooperation-message">приглашаем к сотрудничеству дилеров!</h2>
+            <address class="contact__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</address>
+          </div>
+        </div>
+        <img class="contact__map-image" src="img/map.png" width="320" height="362" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
       </section>
     </main>
+
     <footer class="main-footer">
-      <div class="main-footer__wrapper">
+      <div class="wrapper main-footer__wrapper">
         <a class="main-footer__logo">
           <svg width="101" height="18" viewBox="0 0 101 18" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.26449 16.5385C0.36955 15.2762 -0.0747041 13.7627 1.02073e-05 12.2308V5.84615C-0.108365 4.29774 0.308071 2.75746 1.18546 1.46154C2.05478 0.461538 3.39829 0 5.37403 0C7.34978 0 8.61425 0.461538 9.40455 1.30769C10.2626 2.37941 10.6846 3.72136 10.59 5.07692V6.61539H6.71754V4.84615C6.74881 4.32289 6.66808 3.799 6.48045 3.30769C6.38016 3.10938 6.2212 2.9448 6.02403 2.83513C5.82686 2.72547 5.60049 2.67572 5.37403 2.69231C4.82082 2.69231 4.42568 2.84615 4.26762 3.23077C4.08883 3.77733 4.00862 4.34988 4.03053 4.92308V13.1538C3.98879 13.71 4.0978 14.267 4.34665 14.7692C4.5047 15.1538 4.89985 15.3077 5.45306 15.3077C6.00627 15.3077 6.32239 15.1538 6.48045 14.7692C6.66013 14.2494 6.74049 13.7019 6.71754 13.1538V11.3077H10.59V12.8462C10.6704 14.2238 10.2508 15.5852 9.40455 16.6923C8.61425 17.6154 7.27075 18.0769 5.37403 18.0769C3.47732 18 2.05478 17.5385 1.26449 16.5385Z"/>
