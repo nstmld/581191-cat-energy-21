@@ -1,14 +1,109 @@
 .additional {
-  @include fieldset;
+  padding: 25px 0;
 }
 
+.additional__wrapper {
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additional__subtitle {
+  padding: 25px 0;
+}
 
 .additional__list {
+  @include list-style;
   display: flex;
   flex-direction: column;
 
+  @media (min-width: $desktop) {
+    flex-grow: 1;
+  }
+}
+
+.additional__item {
+  padding: 20px 0;
+  border-bottom: 1px $special-gray-light solid;
+
+  &:first-of-type {
+    border-top: 1px $special-gray-light solid;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.additional__title {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $special-gray-dark-2;
+
+  @media (min-width: $desktop) {
+    flex-grow: 1;
+    align-self: center;
+  }
+}
+
+.additional__features {
+  font-family: $arial;
+  font-size: 14px;
+  line-height: 14px;
+  display: flex;
+  padding: 15px 0;
+  color: $special-gray-dark;
+
+  dt {
+    text-align: left;
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+
+  dd {
+    text-align: right;
+    margin: 0;
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $desktop) {
+    width: 290px;
+    align-self: center;
+    margin-right: 38px;
+  }
+}
+
+.additional__button {
+  padding: 10px;
+  width: 100%;
+
+  @media (min-width: $desktop) {
+    width: 245px;
+    justify-self: center;
+  }
+}
+
+.additional__gift {
+  padding: 150px 0 50px;
+  width: 100%;
+  margin-top: 35px;
+
   @media (min-width: $tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    background-position: center -300px;
+    padding: 70px 0;
+  }
+
+  @media (min-width: $desktop) {
+    background-position: center;
+    width: 245px;
+    margin-top: 0;
+    margin-left: 80px;
+    padding: 170px 0 50px;
   }
 }

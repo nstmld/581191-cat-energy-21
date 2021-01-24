@@ -1,8 +1,43 @@
 .catalog-item {
-  border-bottom: 1px $special-gray-light solid;
+  position: relative;
+  width: 280px;
+  padding: 20px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  &:first-of-type {
-    border-top: 1px $special-gray-light solid;
+  @media (min-width: $tablet) {
+    background-color: $basic-gray;
+    padding: 40px;
+    width: 240px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 165px;
+  }
+}
+
+.catalog-item__image {
+  height: 100%;
+  flex-basis: 50%;
+  text-align: center;
+  align-self: center;
+  padding-top: 10px;
+
+  @media (min-width: $tablet) {
+    flex-basis: 100%;
+    padding-bottom: 10px;
+    height: 116px;
+  }
+}
+
+.catalog-item__info {
+  width: 142px;
+  flex-basis: 50%;
+
+  @media (min-width: $tablet) {
+    flex-basis: 100%;
   }
 }
 
@@ -12,6 +47,14 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
+  margin: 0;
+  padding: 10px 0;
+
+  @media (min-width: $tablet) {
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .catalog-item__features {
@@ -19,12 +62,47 @@
   color: $special-gray-dark;
   font-size: 12px;
   line-height: 16px;
+  display: flex;
+  flex-wrap: wrap;
 
   dt {
     text-align: left;
+    flex-basis: 50%;
+    flex-grow: 1;
   }
 
   dd {
     text-align: right;
+    margin: 0;
+    flex-basis: 50%;
+    flex-grow: 1;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 16px;
+      position: relative;
+
+      &::after {
+        @include pseudo;
+        width: 200%;
+        height: 1px;
+        background-color: $special-gray-light;
+        top: 150%;
+        left: -100%;
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.catalog-item__button {
+  width: 100%;
+  margin-top: 30px;
+
+  @media (min-width: $tablet) {
+    align-self: flex-end;
   }
 }

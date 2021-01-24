@@ -1,0 +1,68 @@
+.catalog-more {
+  position: relative;
+  color: $add-gray;
+  font-weight: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  width: 280px;
+  padding: 70px 20px 20px 20px;
+  margin: 0 auto;
+
+  &::before {
+    @include pseudo;
+    content: url("../img/plus.svg");
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    background-color: $basic-white;
+    border: 2px solid $basic-gray;
+    width: 240px;
+    padding: 165px 40px 40px 40px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 165px;
+  }
+}
+
+.catalog-more__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.catalog-more__text {
+  font-family: $arial;
+  color: $special-gray-dark;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: none;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 50px;
+  }
+}
+
+.catalog-more__button {
+  width: 100%;
+}
