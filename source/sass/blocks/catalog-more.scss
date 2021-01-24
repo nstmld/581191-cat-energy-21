@@ -29,7 +29,7 @@
     background-color: $basic-white;
     border: 2px solid $basic-gray;
     width: 240px;
-    padding: 165px 40px 40px 40px;
+    padding: 165px 40px 22px 40px;
   }
 
   @media (min-width: $desktop) {
@@ -65,4 +65,17 @@
 
 .catalog-more__button {
   width: 100%;
+  margin-top: 16px;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet) {
+    align-self: flex-end;
+    font-size: 16px;
+    margin-top: 34px;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 16px;
+  }
 }

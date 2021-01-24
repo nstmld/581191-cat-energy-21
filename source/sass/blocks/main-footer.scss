@@ -1,5 +1,6 @@
 .main-footer {
   background-color: $basic-gray;
+  padding: 5px 0;
 }
 
 .main-footer__wrapper {
@@ -8,6 +9,7 @@
 
   @media (min-width: $tablet) {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -21,8 +23,14 @@
   }
 }
 
+.main-footer__logo {
+  align-self: center;
+  padding: 20px 0;
+}
+
 .main-footer__logo svg {
   fill: $basic-black;
+  width: 128px;
 
   &:hover {
     fill: transparentize($basic-black, 0.2);
@@ -39,17 +47,34 @@
   text-decoration: none;
   font-size: 16px;
   line-height: 18px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
 
-  svg,
   span {
-    fill: $special-gray-middle;
+    align-self: center;
 
-    &:hover {
+    @media (min-width: $tablet) {
+      margin-right: 20px;
+    }
+  }
+
+  svg {
+    fill: $special-gray-middle;
+  }
+
+  &:hover {
+    svg {
       fill: $basic-green;
     }
+  }
 
-    &:active {
+  &:active {
+    svg {
       fill: transparentize($basic-green, 0.7);
+    }
+
+    span {
       color: transparentize($special-gray-dark, 0.7);
     }
   }
