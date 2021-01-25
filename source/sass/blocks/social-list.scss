@@ -1,6 +1,8 @@
 .social-list {
   @include list-style;
   display: flex;
+  align-self: center;
+  padding: 15px 50px;
 
   svg {
     fill: $special-gray-middle;
@@ -13,4 +15,8 @@
       fill: transparentize($basic-green, 0.7);
     }
   }
+}
+
+.social-list__item {
+  padding: 0 20px;
 }

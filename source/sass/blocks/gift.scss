@@ -1,16 +1,46 @@
 .gift {
   background-image: url("../img/gift-photo-mobile.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: $basic-green;
   color: $basic-white;
-  padding: 40px 60px;
 }
 
 .gift__title {
+  position: relative;
   font-family: $arial;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-align: center;
+  padding: 0 30px;
+
+  &::before {
+    @include pseudo;
+    content: url("../img/gift-icon.svg");
+    top: -115px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet) {
+      top: 50%;
+      left: -50%;
+    }
+
+    @media (min-width: $tablet) {
+      top: -115px;
+      left: 50%;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    text-align: left;
+    left: 60%;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: center;
+    left: auto;
+  }
 }
