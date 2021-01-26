@@ -7,7 +7,7 @@
   font-size: 16px;
   line-height: 20px;
   width: 280px;
-  padding: 70px 20px 20px 20px;
+  padding: 76px 20px 5px 20px;
   margin: 0 auto;
 
   &::before {
@@ -22,6 +22,7 @@
     @media (min-width: $tablet) {
       width: 60px;
       height: 60px;
+      top: 50px;
     }
   }
 
@@ -29,7 +30,7 @@
     background-color: $basic-white;
     border: 2px solid $basic-gray;
     width: 240px;
-    padding: 165px 40px 22px 40px;
+    padding: 157px 40px 22px 40px;
   }
 
   @media (min-width: $desktop) {
@@ -41,6 +42,8 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -55,11 +58,18 @@
   font-size: 12px;
   line-height: 16px;
   text-transform: none;
+  margin: 0;
+  padding: 8px 0 5px 0;
 
   @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 18px;
     margin-bottom: 50px;
+    padding: 23px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 44px;
   }
 }
 
@@ -71,11 +81,12 @@
   @media (min-width: $tablet) {
     align-self: flex-end;
     font-size: 16px;
-    margin-top: 34px;
-    margin-bottom: 18px;
+    margin-top: 21px;
+    margin-bottom: 16px;
+    padding: 10px 0;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 16px;
+    margin: 3px 0 20px;
   }
 }

@@ -1,9 +1,13 @@
 .catalog__title {
-  padding: 50px 0;
+  padding: 24px 0;
+
+  @media (min-width: $tablet) {
+    padding: 58px 0;
+  }
 }
 
 .catalog__wrapper {
-  margin: 0 auto;
+  margin: 15px auto 0 auto;
 
   @media (min-width: $tablet) {
     padding: 0 30px;
@@ -24,6 +28,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 90px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 112px;
   }
 }
 
@@ -43,5 +52,15 @@
     border: none;
     margin-bottom: 140px;
     height: min-content;
+  }
+
+  &:nth-last-of-type(-n+2) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    &:nth-last-of-type(-n+4) {
+      margin-bottom: 0;
+    }
   }
 }

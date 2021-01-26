@@ -1,6 +1,15 @@
 .additional {
   @include fieldset;
-  padding: 25px 0;
+  padding: 0;
+  padding-bottom: 34px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 74px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 80px;
+  }
 }
 
 .additional__wrapper {
@@ -11,7 +20,16 @@
 }
 
 .additional__subtitle {
-  padding: 25px 0;
+  padding: 20px 0;
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet) {
+    padding: 64px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 72px 0;
+  }
 }
 
 .additional__list {
@@ -25,15 +43,32 @@
 }
 
 .additional__item {
-  padding: 20px 0;
+  padding: 13px 0;
   border-bottom: 1px $special-gray-light solid;
 
   &:first-of-type {
     border-top: 1px $special-gray-light solid;
   }
 
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 13px 40px;
+    border: 1px $special-gray-light solid;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+  }
+
   @media (min-width: $desktop) {
     display: flex;
+    flex-wrap: wrap;
+    padding: 4px 0;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -46,6 +81,11 @@
   font-weight: 400;
   color: $special-gray-dark-2;
 
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   @media (min-width: $desktop) {
     flex-grow: 1;
     align-self: center;
@@ -57,20 +97,36 @@
   font-size: 14px;
   line-height: 14px;
   display: flex;
-  padding: 12px 0;
+  padding: 0;
   color: $special-gray-dark;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 16px;
+    align-items: center;
+  }
 
   dt {
     text-align: left;
     flex-basis: 50%;
     flex-grow: 1;
+
+    @media (min-width: $tablet) and (max-width: $tablet-only) {
+      text-align: right;
+      flex-basis: 60%;
+    }
   }
 
   dd {
     text-align: right;
     margin: 0;
-    flex-basis: 50%;
+    width: 50%;
     flex-grow: 1;
+
+    @media (min-width: $tablet) {
+      width: 100px;
+      flex-shrink: 0;
+    }
   }
 
   @media (min-width: $desktop) {
@@ -83,26 +139,26 @@
 .additional__button {
   width: 100%;
   padding: 10px 0;
+  margin-bottom: 7px;
 
   @media (min-width: $tablet) {
     font-size: 16px;
+    margin: 13px 0;
   }
 
   @media (min-width: $desktop) {
     width: 245px;
     justify-self: center;
-    padding: 0;
   }
 }
 
 .additional__gift {
-  padding: 150px 0 50px;
-  width: 100%;
   margin-top: 35px;
 
   @media (min-width: $tablet) {
     background-position: center -300px;
     padding: 70px 0;
+    margin-top: 70px;
   }
 
   @media (min-width: $desktop) {

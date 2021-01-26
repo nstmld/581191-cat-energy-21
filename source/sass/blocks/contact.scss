@@ -64,6 +64,14 @@
   color: $special-gray-dark;
   flex-basis: 140px;
 
+  br {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: inline;
+    }
+  }
+
   @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 20px;
