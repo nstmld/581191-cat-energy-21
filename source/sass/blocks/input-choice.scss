@@ -1,25 +1,80 @@
 .input-choice__item {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: $special-gray-dark;
-  padding: 7px 0;
+  label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    padding: 12.5px 0 12.5px 50px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: $special-gray-dark;
 
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 30px;
+    @media (min-width: $tablet) {
+      font-size: 20px;
+      line-height: 30px;
+      padding: 12px 0 12px 65px;
+    }
+
+    &::before {
+      @include pseudo;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      border: 1px solid $special-gray-light;
+
+      :hover {
+        border-color: $choice-hover;
+      }
+
+      @media (min-width: $tablet) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &--radio {
+    label {
+      &::before {
+        border-radius: 100px;
+      }
+    }
   }
 }
 
-.input-choice__item--checkbox {
-  color: $basic-black;
+.input-choice__item input:checked ~ label::after {
+  @include pseudo;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-choice__item--checkbox input:checked ~ label::after {
+  left: 7px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/check.svg");
 
   @media (min-width: $tablet) {
-    flex-basis: 50%;
+    width: 18px;
+    height: 18px;
+    left: 17px;
   }
+}
 
-  @media (min-width: $desktop) {
-    flex-basis: 25%;
+.input-choice__item--radio input:checked ~ label::after {
+  left: 9px;
+  width: 13.5px;
+  height: 13.5px;
+  background-color: $basic-green;
+  border-radius: 100px;
+
+  @media (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+    left: 17px;
   }
 }

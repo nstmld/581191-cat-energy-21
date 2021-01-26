@@ -19,9 +19,9 @@
 @mixin fieldset {
   border: none;
   margin: 0;
-  padding: 20px 0;
+  padding: 0;
 
-  &:last-of-type {
-    border-bottom: none;
-  }
+  // &:last-of-type {
+  //   border-bottom: none;
+  // }
 }

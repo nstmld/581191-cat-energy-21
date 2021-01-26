@@ -1,14 +1,14 @@
 .additional {
   @include fieldset;
   padding: 0;
-  padding-bottom: 34px;
+  padding-bottom: 27px;
 
   @media (min-width: $tablet) {
-    padding-bottom: 74px;
+    padding-bottom: 24px;
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
 }
 
@@ -36,39 +36,29 @@
   @include list-style;
   display: flex;
   flex-direction: column;
+  margin-top: 21px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 35px;
+  }
 
   @media (min-width: $desktop) {
     flex-grow: 1;
+    margin-top: 25px;
   }
 }
 
 .additional__item {
   padding: 13px 0;
-  border-bottom: 1px $special-gray-light solid;
 
-  &:first-of-type {
-    border-top: 1px $special-gray-light solid;
-  }
-
-  @media (min-width: $tablet) and (max-width: $tablet-only) {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 13px 40px;
-    border: 1px $special-gray-light solid;
-    align-items: center;
-    justify-content: space-between;
-
-    &:not(:last-child) {
-      border-bottom: none;
-    }
+  @media (min-width: $tablet) {
+    width: 50%;
   }
 
   @media (min-width: $desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4px 0;
-    align-items: center;
-    justify-content: space-between;
+    width: 25%;
   }
 }
 

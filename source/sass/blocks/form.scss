@@ -1,16 +1,32 @@
 .form {
   display: flex;
   flex-direction: column;
-  padding: 30px 0;
+  padding: 0;
+  margin-bottom: 15px;
 }
 
 .form__subtitle {
-  .wrapper--thin-tablet {
-    margin: auto;
-    margin-bottom: 40px;
+  margin: 10px 0;
+
+  @media (min-width: $tablet) {
+    margin: 15px 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 23px 0;
+  }
+
+  .subtitle__text {
+    @media (min-width: $tablet) {
+      padding: 0;
+      padding-right: 23px;
+
+      &::before {
+        display: block;
+      }
+    }
   }
 }
-
 
 .form__two-column {
   @media (min-width: $desktop) {
@@ -23,6 +39,7 @@
 
 .form__cat-info {
   @include fieldset;
+  padding-bottom: 8px;
 
   @media (min-width: $desktop) {
     .wrapper {
@@ -42,6 +59,11 @@
 
   @media (min-width: $tablet) {
     border: none;
+    margin: 46px 0;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 0;
   }
 
   @media (min-width: $desktop) {
@@ -63,20 +85,35 @@
 }
 
 .form__point-list {
+  @include list-style;
   display: flex;
   flex-direction: column;
+  padding: 15px 0;
 
   @media (min-width: $tablet) {
     border: 1px solid $add-gray-line;
-    padding: 25px;
+    padding: 15px 25px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 23px 25px;
   }
 }
 
 .form__contacts {
+  margin-top: 27px;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet) {
+    max-width: 635px;
+    margin: 75px 0 34px;
+  }
+
   @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     max-width: $desktop;
+
 
     label {
       @media (min-width: $desktop) {
@@ -99,6 +136,7 @@
     flex-direction: row;
     width: $tablet;
     align-items: center;
+    margin-bottom: 55px;
   }
 
   @media (min-width: $desktop) {
@@ -110,7 +148,7 @@
   width: 280px;
 
   @media (min-width: $desktop) {
-    flex-basis: 50%;
+    width: 39.5%;
   }
 }
 

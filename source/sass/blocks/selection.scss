@@ -1,10 +1,22 @@
+.selection__header {
+  @media (min-width: $tablet) {
+    padding: 33px 0 20px;
+  }
+}
+
+.selection__title {
+  padding: 23px 0;
+}
+
 .selection__description {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+  padding-bottom: 25px;
 
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
+    padding-top: 15px;
   }
 }

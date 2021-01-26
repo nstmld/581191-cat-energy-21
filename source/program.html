@@ -72,21 +72,21 @@
             </fieldset>
             <fieldset class="form__point">
               <div class="wrapper wrapper--thin-tablet">
-                <div class="input-choice form__point-list">
-                  <legend class="visually-hidden">Цель</legend>
-                  <label class="input-choice__item">
-                    <input type="radio" name="goal" value="weight-loss" checked>
-                    <span>Похудение</span>
-                  </label>
-                  <label class="input-choice__item">
-                    <input type="radio" name="goal" value="muscle">
-                    <span>Набор массы</span>
-                  </label>
-                  <label class="input-choice__item">
-                    <input type="radio" name="goal" value="not-know">
-                    <span>Не знаю (Нужен ваш совет)</span>
-                  </label>
-                </div>
+                <legend class="visually-hidden">Цель</legend>
+                <ul class="input-choice form__point-list">
+                  <li class="input-choice__item input-choice__item--radio">
+                    <input class="input-choice__input visually-hidden" type="radio" name="goal" value="weight-loss" id="weight-loss" checked>
+                    <label for="weight-loss">Похудение</label>
+                  </li>
+                  <li class="input-choice__item input-choice__item--radio">
+                    <input class="input-choice__input visually-hidden" type="radio" name="goal" value="muscle" id="muscle">
+                    <label for="muscle">Набор массы</label>
+                  </li>
+                  <li class="input-choice__item input-choice__item--radio">
+                    <input class="input-choice__input visually-hidden" type="radio" name="goal" value="not-know" id="not-know">
+                    <label for="not-know">Не знаю (Нужен ваш совет)</label>
+                  </li>
+                </ul>
               </div>
             </fieldset>
           </div>
@@ -124,24 +124,24 @@
               </legend>
             </div>
             <div class="wrapper wrapper--thin-tablet">
-              <div class="input-choice additional__list">
-                <label class="input-choice__item input-choice__item--checkbox">
-                  <input type="checkbox" name="sweetener" checked>
-                  <span>сахарозаменитель</span>
-                </label>
-                <label class="input-choice__item input-choice__item--checkbox">
-                  <input type="checkbox" name="water">
-                  <span>питьевая вода</span>
-                </label>
-                <label class="input-choice__item input-choice__item--checkbox">
-                  <input type="checkbox" name="milk">
-                  <span>молоко</span>
-                </label>
-                <label class="input-choice__item input-choice__item--checkbox">
-                  <input type="checkbox" name="vitamin">
-                  <span>витамины</span>
-                </label>
-              </div>
+              <ul class="input-choice additional__list">
+                <li class="input-choice__item input-choice__item--checkbox additional__item">
+                  <input class="input-choice__input visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <label for="sweetener">сахарозаменитель</label>
+                </li>
+                <li class="input-choice__item input-choice__item--checkbox additional__item">
+                  <input class="input-choice__input visually-hidden" type="checkbox" name="water" id="water">
+                  <label for="water">питьевая вода</label>
+                </li>
+                <li class="input-choice__item input-choice__item--checkbox additional__item">
+                  <input class="input-choice__input visually-hidden" type="checkbox" name="milk" id="milk" checked>
+                  <label for="milk">молоко</label>
+                </li>
+                <li class="input-choice__item input-choice__item--checkbox additional__item">
+                  <input class="input-choice__input visually-hidden" type="checkbox" name="vitamin" id="vitamin">
+                  <label for="vitamin">витамины</label>
+                </li>
+              </ul>
             </div>
           </fieldset>
           <div class="wrapper wrapper--thin-tablet">

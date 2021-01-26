@@ -1,5 +1,9 @@
 .comment {
   @include fieldset;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 39px;
+  }
 }
 
 .comment__subtitle {
@@ -14,10 +18,13 @@
   line-height: 18px;
   color: $special-gray-dark;
   border: 1px $special-gray-light solid;
-  padding: 13px 16px;
+  padding: 10px 16px;
   flex-grow: 1;
-  height: 150px;
-  width: 280px;
+  height: 130px;
+  width: 247px;
+  margin-top: 23px;
+  margin-bottom: 8px;
+  resize: none;
 
   &::placeholder {
     color: $special-gray-dark;
@@ -26,7 +33,9 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
-    width: 631px;
+    width: 600px;
+    height: 150px;
+    margin-top: 55px;
   }
 
   @media (min-width: $desktop) {
