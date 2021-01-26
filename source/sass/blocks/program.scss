@@ -1,22 +1,37 @@
+.program {
+  @media (min-width: $desktop) {
+    margin-bottom: 29px;
+  }
+}
+
 .program__list {
   @include list-style;
   display: flex;
   flex-direction: column;
 
+  @media (min-width: $tablet) {
+    margin-top: -4px;
+  }
+
   @media (min-width: $desktop) {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 .program__item {
-  background-color: $background-gray;
+  background-color: $basic-gray;
   padding: 20px;
   margin-bottom: 20px;
 
+  @media (min-width: $tablet) {
+    padding: 76px 52px 57px 52px;
+    margin-bottom: 30px;
+  }
+
   @media (min-width: $desktop) {
-    &:nth-child(odd) {
-      margin-right: 80px;
-    }
+    flex-basis: 470px;
+    padding: 57px 52px 57px 55px;
   }
 }
 
@@ -25,8 +40,18 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  padding: 0;
+  padding: 10px 0 0 70px;
   margin: 0;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 18px 0 20px 160px;
+  }
 }
 
 .program__description {
@@ -34,6 +59,26 @@
   color: $special-gray-dark;
   font-size: 14px;
   line-height: 18px;
+  padding: 17px 0 22px 0;
+  position: relative;
+  border-bottom: 1px solid $add-gray-line;
+
+  @media (min-width: $tablet) {
+    border-bottom: none;
+    font-size: 16px;
+    line-height: 24px;
+    width: 377px;
+    padding: 10px 0 34px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 40px 0 10px 0;
+    width: 470px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .program__link {
@@ -42,8 +87,91 @@
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
+  padding-top: 5px;
+  position: relative;
+
+  &::after {
+    @include pseudo;
+    top: 43%;
+    left: 122%;
+    width: 33px;
+    height: 11px;
+    background-image: url("../img/arrow-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 32px;
+    background-image: url("../img/arrow-icon-hover.svg");
+  }
 
   &:active {
-    color: transparentize($basic-black, 0.7);
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.program__item--slim .program__title {
+  &::before {
+    @include pseudo;
+    background-image: url("../img/slim-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 53px;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-41%);
+
+    @media (min-width: $tablet) {
+      width: 200px;
+      height: 211px;
+      left: 65%;
+      top: 50%;
+      transform: translateY(-7%);
+    }
+
+    @media (min-width: $desktop) {
+      width: 100px;
+      height: 106px;
+      left: 0;
+      top: -15%;
+    }
+  }
+}
+
+.program__item--muscle .program__title {
+  &::before {
+    @include pseudo;
+    background-image: url("../img/muscle-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 50px;
+    left: -3%;
+    top: 50%;
+    transform: translateY(-45%);
+
+    @media (min-width: $tablet) {
+      width: 268px;
+      height: 200px;
+      left: 60%;
+      top: 50%;
+      transform: translateY(-2%);
+    }
+
+    @media (min-width: $desktop) {
+      width: 134px;
+      height: 100px;
+      left: -3%;
+      top: -15%;
+    }
   }
 }

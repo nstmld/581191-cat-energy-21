@@ -2,7 +2,15 @@
   @include list-style;
   display: flex;
   align-self: center;
-  padding: 15px 50px;
+  padding: 17px 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    width: auto;
+    padding: 0;
+  }
 
   svg {
     fill: $special-gray-middle;
@@ -14,9 +22,15 @@
     &:active {
       fill: transparentize($basic-green, 0.7);
     }
+
+    @media (min-width: $tablet) {
+      width: 150%;
+      height: auto;
+    }
   }
 }
 
 .social-list__item {
-  padding: 0 20px;
+  padding: 0 17px;
+  margin-top: 3px;
 }

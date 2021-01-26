@@ -1,8 +1,10 @@
 .model {
   background-color: $background-gray;
+  padding-bottom: 5px;
 
   @media (min-width: $tablet) {
     background-color: $basic-white;
+    padding: 0;
   }
 
   @media (min-width: $desktop) {
@@ -13,31 +15,32 @@
 .model__wrapper {
   @media (min-width: $desktop) {
     display: flex;
-    background-image: linear-gradient(to right, $basic-gray 75%, $background-gray 75%);
+    background-image: linear-gradient(to right, $basic-gray 72%, $background-gray 72%);
     justify-content: space-between;
   }
 }
 
 .model__background {
   @media (min-width: $tablet) {
-    background-image: linear-gradient(to bottom, $basic-white 60%, $background-gray 60%);
+    background-image: linear-gradient(to bottom, $basic-white 48%, $background-gray 48%);
   }
 
   @media (min-width: $desktop) {
     background-color: none;
-    background-image: linear-gradient(to right, $basic-gray 75%, $background-gray 75%);
+    background-image: linear-gradient(to right, $basic-gray 72.2%, $background-gray 72.2%);
+    height: 530px;
   }
 }
 
 .model__title {
-  padding: 25px 0;
+  padding: 25px 0 21px 0;
 
   @media (min-width: $tablet) {
-    padding: 50px 0;
+    padding: 17px 0;
   }
 
   @media (min-width: $desktop) {
-    padding: 60px 0;
+    padding: 5px 0;
   }
 }
 
@@ -46,11 +49,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin: 30px 0;
   }
 
   @media (min-width: $desktop) {
     flex-direction: column;
+    align-self: baseline;
   }
 }
 
@@ -65,17 +69,21 @@
     font-size: 16px;
     line-height: 24px;
     flex-grow: 3;
+    padding-bottom: 20px;
   }
 
   @media (min-width: $desktop) {
-    max-width: 500px;
-    padding: 40px 0;
+    max-width: 435px;
+    padding: 98px 0 10px 0;
+
+    br {
+      display: none;
+    }
   }
 }
 
 .model__statistic {
   display: flex;
-  justify-content: space-between;
 
   @media (min-width: $tablet) {
     flex-grow: 2;
@@ -96,8 +104,9 @@
   position: relative;
 
   @media (min-width: $tablet) {
-    flex-basis: 200px;
-    margin-right: 42px;
+    margin-right: 39px;
+    padding: 17px 0;
+    flex-basis: 160px;
   }
 
   @media (min-width: $desktop) {
@@ -110,6 +119,7 @@
   line-height: 24px;
   color: $basic-black;
   text-transform: uppercase;
+  margin-top: -2px;
 
   @media (min-width: $tablet) {
     font-size: 30px;
@@ -129,12 +139,12 @@
   color: $special-gray-dark;
   display: inline-block;
   position: absolute;
-  width: 87px;
+  width: 80px;
   margin: 0;
   padding: 0 5px;
   left: 50%;
   top: 100%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -55%);
 
   @media (min-width: $tablet) {
     font-size: 14px;
@@ -156,7 +166,11 @@
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  margin: 35px 0;
+  margin: 29px 0;
+
+  @media (min-width: $tablet) {
+    margin: 26px 0;
+  }
 
   span {
     padding: 0 2px;
@@ -164,14 +178,15 @@
     @media (min-width: $tablet) {
       flex-basis: 200px;
       font-size: 20px;
-      line-height: 20px;
+      line-height: 24px;
     }
 
     @media (min-width: $desktop) {
-      text-align: center;
+      text-align: left;
+      flex-basis: 185px;
 
-      &:first-child {
-        margin-right: 18px;
+      &:last-child {
+        text-align: center;
       }
     }
   }
@@ -191,26 +206,97 @@
 }
 
 .model__photo-block {
+  position: relative;
+
+  @media (min-width: $tablet) {
+    min-height: 650px;
+    margin-top: 50px;
+  }
+
   @media (min-width: $desktop) {
-    background-image: linear-gradient(to right, $basic-gray 50%, $background-gray 50%);
+    background-image: linear-gradient(to right, $basic-gray 51%, $background-gray 51%);
+    height: 200px;
+    top: 458px;
+    width: 820px;
+    left: 100px;
+    min-height: auto;
   }
 }
 
 .model__photo {
+  position: absolute;
   display: block;
-  margin: 10px auto;
+  margin: 0 auto;
+
+  &--before {
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+
+    @media (min-width: $tablet) {
+      clip: rect("0px, 339px, 600px, 1px");
+      width: 680px;
+      height: auto;
+      margin: 15px;
+    }
+
+    @media (min-width: $desktop) {
+      clip: rect("0px, 361px, 600px, 1px");
+      width: 680px;
+      height: auto;
+      top: -635px;
+      left: 46px;
+      margin: 0;
+    }
+  }
+
+  &--after {
+    display: none;
+    height: auto;
+    width: 250px;
+    top: 25px;
+    left: 35px;
+
+    @media (min-width: $tablet) {
+      display: block;
+      clip: rect("0px, 580px, 600px, 248px");
+      width: 548px;
+      top: 17px;
+      left: 106px;
+    }
+
+    @media (min-width: $desktop) {
+      clip: rect("0px, 580px, 600px, 268px");
+      width: 548px;
+      left: 139px;
+      top: -630px;
+    }
+  }
 }
 
 .model__control {
   display: flex;
-  padding: 30px 0;
+  padding: 272px 0 30px 0;
   text-transform: uppercase;
   justify-content: space-between;
   font-size: 16px;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    width: 80%;
+    padding: 555px 0 30px 0;
+    font-size: 20px;
+  }
 
   @media (min-width: $desktop) {
     position: relative;
     font-size: 20px;
+    top: -74px;
+    padding: 0;
+    width: 71.5%;
+    left: 11.5px;
   }
 }
 
@@ -220,4 +306,53 @@
 
 .model__became {
   text-align: right;
+}
+
+.model__bar {
+  position: relative;
+  margin: 0 auto;
+  width: 84px;
+  height: 14px;
+  background-color: $basic-white;
+  border: 1px solid $special-gray-light;
+  border-radius: 10px;
+
+  @media (min-width: $tablet) {
+    width: 428px;
+    height: 6px;
+    background-color: $toggle-bar;
+    border: none;
+  }
+}
+
+.model__toggle {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 35px;
+  height: 6px;
+  background-color: $basic-green;
+  border-radius: 10px;
+
+  @media (min-width: $tablet) {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    border-radius: 100px;
+    background-image: url("../img/slider-control.svg");
+    background-position: center;
+    top: -15px;
+    left: 45%;
+
+    &:hover {
+      cursor: pointer;
+      top: -14px;
+      background-image: url("../img/slider-control_hover.svg");
+    }
+
+    &:active {
+      background-image: url("../img/slider-control_pressed.svg");
+    }
+  }
 }
