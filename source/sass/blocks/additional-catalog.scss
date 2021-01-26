@@ -1,20 +1,20 @@
-.additional {
+.additional-catalog {
   @include fieldset;
   padding: 25px 0;
 }
 
-.additional__wrapper {
+.additional-catalog__wrapper {
   @media (min-width: $desktop) {
     display: flex;
     justify-content: space-between;
   }
 }
 
-.additional__subtitle {
+.additional-catalog__subtitle {
   padding: 25px 0;
 }
 
-.additional__list {
+.additional-catalog__list {
   @include list-style;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
   }
 }
 
-.additional__item {
+.additional-catalog__item {
   padding: 20px 0;
   border-bottom: 1px $special-gray-light solid;
 
@@ -37,7 +37,7 @@
   }
 }
 
-.additional__title {
+.additional-catalog__title {
   font-size: 16px;
   line-height: 16px;
   margin: 0;
@@ -52,7 +52,7 @@
   }
 }
 
-.additional__features {
+.additional-catalog__features {
   font-family: $arial;
   font-size: 14px;
   line-height: 14px;
@@ -80,7 +80,7 @@
   }
 }
 
-.additional__button {
+.additional-catalog__button {
   width: 100%;
   padding: 10px 0;
 
@@ -95,7 +95,7 @@
   }
 }
 
-.additional__gift {
+.additional-catalog__gift {
   padding: 150px 0 50px;
   width: 100%;
   margin-top: 35px;
