@@ -105,14 +105,14 @@
   margin-bottom: 5px;
 
   @media (min-width: $tablet) {
-    max-width: 635px;
-    margin: 75px 0 34px;
+    margin: 75px auto 34px;
   }
 
   @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     max-width: $desktop;
+    margin: 75px auto;
 
 
     label {
